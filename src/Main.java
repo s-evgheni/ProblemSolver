@@ -32,7 +32,7 @@ public class Main {
         // SortedSearch test should return 2 ()
         int[] input = new int[] { 1, 3, 5, 7};
         int lessThenConstraint = 4;
-        System.out.println(SortedSearch.countNumbers(new int[] { 1, 3, 5, 7 }, 4));
+        System.out.println(SortedSearch.countNumbers(input, lessThenConstraint));
 
         // Quadratic equation test should return -1 and -4
         Roots roots = QuadraticEquation.findRoots(2, 10, 8);
