@@ -10,6 +10,9 @@ import java.util.Arrays;
  */
 
 // The best way to solve this problem is to use binary search
+//Binary search is a fast algorithm for searching in a sorted array S of keys.
+//To search for key q, we compare q to the middle key S[n/2]. If q appears before S[n/2], it must reside in the top half of our set; if not, it must reside in the bottom half of our set.
+//By recursively repeating this process on the correct half, we find the key in a total of logN comparisons, a big win over the n/2 we expect with sequential search.
 public class SortedSearch {
     public static int countNumbers(int[] sortedArray, int lessThan) {
         int left = 0;
