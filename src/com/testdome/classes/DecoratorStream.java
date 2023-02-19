@@ -34,9 +34,11 @@ public class DecoratorStream extends OutputStream
     @Override
     public void write(byte[] b, int off, int len) throws IOException {
         if (!prefixWritten) {
+            //write prefix if not yet added
             stream.write(prefix.getBytes(StandardCharsets.UTF_8));
             prefixWritten = true;
         }
+        //add Hello world!
         stream.write(b, off, len);
     }
 
